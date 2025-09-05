@@ -69,7 +69,7 @@ For enhanced uplift, examination suggests dataset scaling (e.g., synthetic augme
 
 ## Replication Success and Limitations
 
-Replication is **partially successful**: Procedural and definitional fidelity is full (staged pipeline, intact formulas like SMOTE interpolation/ENN mismatch), with qualitative trends replicated (ensemble gains post-PCA/SMOTEENN, LightGBM/XGBoost dominance). However, quantitative success is limited—our peaks (F1~0.58, AUC~0.75) fall short of paper's ~0.999 due to:
+Replication is **partially successful**: Procedural and definitional fidelity is full (staged pipeline, intact formulas like SMOTE interpolation/ENN mismatch), with qualitative trends replicated (ensemble gains post-PCA/SMOTEENN, LightGBM/XGBoost dominance). However, quantitative success is limited—our peaks (F1 \~0.58, AUC \~0.75) fall short of paper's \~0.999 due to:
 - **Dataset Differences**: Smaller scale (1k vs. >46k) and milder imbalance (70:30 vs. ~1:68) reduce separability; public noise (e.g., weaker IV predictors) caps improvements.
 - **Implementation Nuances**: Top-20 IV (vs. paper's qualitative prioritization), 5-iteration undersampling (approximates but may under-diversify), default k in SMOTEENN (intact but untuned).
 - **Tuning Scope**: Limited grid (to avoid overfitting on small data) yields gains but not exhaustive optimization.
