@@ -1,0 +1,15 @@
+[project]
+name = "credit-risk-prediction"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "imbalanced-learn>=0.14.0",
+    "lightgbm>=4.6.0",
+    "loguru>=0.7.3",
+    "pandas>=2.3.2",
+    "pytorch-tabnet>=4.1.0",
+    "scikit-learn>=1.7.1",
+    "xgboost>=3.0.4",
+]
