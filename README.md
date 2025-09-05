@@ -20,7 +20,7 @@ Examination verifies intact contributions: e.g., SMOTEENN's gradual boundary exp
 ## The Replication Approach
 I implemented the pipeline in Python (using libraries like scikit-learn, imbalanced-learn, lightgbm, xgboost, pytorch-tabnet), with adaptations for the public dataset:
 
-- **Preprocessing**: One-hot encoding categoricals (intact handling of mixed types); IV computation with q=10 binning for numerics, direct for binaries; top-20 selection by descending IV (retaining ~70-80% discriminatory power, e.g., credit_amount IV~0.15).
+- **Preprocessing**: One-hot encoding categoricals (intact handling of mixed types); IV computation with q=10 binning for numerics, direct for binaries; top-20 selection by descending IV (retaining approximately 70-80% discriminatory power, e.g., credit_amount IV approximately 0.15).
 - **Undersampling**: 5 iterations, balancing to ~240/class per subset; models trained per iteration, ensemble averaged (intact diversity via seeded randomness).
 - **PCA**: n=10 components post-undersampling (variance retention examined ~80-90%).
 - **SMOTEENN**: Post-PCA application (k=5/3 intact); resampled data used for final training.
